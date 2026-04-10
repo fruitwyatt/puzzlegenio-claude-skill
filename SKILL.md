@@ -129,13 +129,15 @@ https://puzzlegenio.com/word-search-maker?words=cat,dog,bird,fish,turtle&gridSiz
 
 | Parameter | Type | Example | Description |
 |-----------|------|---------|-------------|
-| `words` | string | `sun,moon,star,planet` | Comma-separated words (auto-generates clues) |
+| `words` | string | `sun:closest%20star,moon:orbits%20earth` | Comma-separated `word:clue` pairs (URL-encode spaces in clues). Plain words use word as clue. |
 | `title` | string | `Space%20Quiz` | Puzzle title (URL-encoded) |
 | `difficulty` | string | `medium` | `easy`, `medium`, or `hard` |
 
+**Important:** Always URL-encode spaces as `%20` in clue text. Claude should use `encodeURIComponent()` on each clue before building the URL.
+
 **Example:**
 ```
-https://puzzlegenio.com/crossword-puzzle-maker?words=sun,moon,star,planet,comet&difficulty=medium&title=Space%20Quiz
+https://puzzlegenio.com/crossword-puzzle-maker?words=sun:closest%20star,moon:orbits%20earth,mars:red%20planet&difficulty=medium&title=Space%20Quiz
 ```
 
 ### Sudoku Puzzle Maker
@@ -155,12 +157,12 @@ https://puzzlegenio.com/sudoku-puzzle-maker?difficulty=easy&count=20&perPage=6
 
 | Parameter | Type | Example | Description |
 |-----------|------|---------|-------------|
-| `image` | string | `https://example.com/photo.jpg` | Image URL (URL-encoded) |
+| `image` | string | `https://images.unsplash.com/photo-xxx` | Image URL (must be publicly accessible) |
 | `pieces` | number | `100` | Number of pieces, 4-500 |
 
 **Example:**
 ```
-https://puzzlegenio.com/jigsaw-puzzle-maker?pieces=100
+https://puzzlegenio.com/jigsaw-puzzle-maker?image=https://images.unsplash.com/photo-1506744038136-46273834b3fb&pieces=200
 ```
 
 ### Bingo Card Maker
@@ -172,9 +174,11 @@ https://puzzlegenio.com/jigsaw-puzzle-maker?pieces=100
 | `cardCount` | number | `30` | Number of unique cards, 1-100 |
 | `gridSize` | number | `5` | Grid size: `3`, `4`, or `5` |
 
+**Important:** Minimum word count depends on grid size: 3x3 needs 9+ words, 4x4 needs 16+, 5x5 needs 25+ (center is free space, so 24 unique words). Always provide enough words or the cards won't generate.
+
 **Example:**
 ```
-https://puzzlegenio.com/bingo-card-maker?words=mercury,venus,earth,mars,jupiter,saturn&cardCount=30&gridSize=5
+https://puzzlegenio.com/bingo-card-maker?words=mercury,venus,earth,mars,jupiter,saturn,neptune,uranus,pluto,asteroid,comet,meteor,galaxy,nebula,orbit,eclipse,gravity,cosmos,quasar,nova,pulsar,supernova,constellation,satellite,rocket&cardCount=30&gridSize=5
 ```
 
 ### Nonogram Puzzle Maker

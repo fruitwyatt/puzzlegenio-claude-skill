@@ -42,8 +42,8 @@ Generate links with pre-filled settings:
 # Word search with specific words and grid size
 https://puzzlegenio.com/word-search-maker?words=cat,dog,bird,fish&gridSize=15&diagonal=true
 
-# Crossword with words and difficulty
-https://puzzlegenio.com/crossword-puzzle-maker?words=sun,moon,star,planet&difficulty=medium
+# Crossword with word:clue pairs and difficulty
+https://puzzlegenio.com/crossword-puzzle-maker?words=sun:closest%20star,moon:orbits%20earth,mars:red%20planet&difficulty=medium
 
 # 20 easy sudoku puzzles, 6 per page
 https://puzzlegenio.com/sudoku-puzzle-maker?difficulty=easy&count=20&perPage=6

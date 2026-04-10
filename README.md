@@ -63,7 +63,7 @@ See [SKILL.md](SKILL.md) for the full parameter reference.
 |-------------|----------|
 | **Crossword** | AI-generated clues, multiple difficulties, answer keys, printable PDF |
 | **Word Search** | Custom word lists, diagonal/backward words, themed generation, large print option |
-| **Sudoku** | 4 difficulty levels, batch generation (up to 10 per page), printable worksheets |
+| **Sudoku** | 4 difficulty levels, batch generation (up to 9 per page), printable worksheets |
 | **Jigsaw** | Upload any photo, play online, download pieces as ZIP/SVG/DXF, 3D print (STL) |
 | **Bingo** | Custom categories, AI word lists, caller lists, multiple unique cards per set |
 | **Nonogram** | Image-to-nonogram conversion, play online, printable PDF |

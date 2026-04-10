@@ -12,13 +12,13 @@ Add this skill to your Claude Code project:
 # In your project directory
 mkdir -p .claude/skills/puzzlegenio
 curl -o .claude/skills/puzzlegenio/SKILL.md \
-  https://raw.githubusercontent.com/puzz-gen/puzzlegenio-claude-skill/main/SKILL.md
+  https://raw.githubusercontent.com/fruitwyatt/puzzlegenio-claude-skill/main/SKILL.md
 ```
 
 Or clone the full repo:
 
 ```bash
-git clone https://github.com/puzz-gen/puzzlegenio-claude-skill.git .claude/skills/puzzlegenio
+git clone https://github.com/fruitwyatt/puzzlegenio-claude-skill.git .claude/skills/puzzlegenio
 ```
 
 ## Usage
